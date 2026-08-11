@@ -8,7 +8,13 @@ typedef struct lista {
 } TLista;
 
 void altera(TLista* li, int vantigo, int vnovo) {
-    //TODO: completar aqui
+    TLista* p = li;
+    while (p != NULL){
+        if (p->info == vantigo)
+            p->info = vnovo;
+    p = p->prox;
+    }
+
 }
 
 void imprime_lista(TLista *li) {
